@@ -1,13 +1,19 @@
 #include <stdio.h>
 
 void main (void) {
-	printf("This is a test program.\n");
+	printf("This is a test program.\n");	/* Print data to the console. The \n is a newline */
 	
 	unsigned int my_uint = 5;		/* This  is an unsigned integer */
 	int my_int = -25;			/* This is a signed integer */
-	
+
 	printf("Unsigned integer: %i\n", my_uint);
 	printf("Signed integer: %i\n", my_int);
+
+	printf("Input an integer>");
+	scanf("%i", &my_int);		/* Assign user input to variable my_int. The & will make
+						more sense when after pointers are covered. The 'i'
+						specifies the type of data expected to be input.*/
+	printf("User integer: %i\n", my_int);
 
 	char my_character = 'A';	/* A char holds 1 byte representing a character in ASCII */
 
