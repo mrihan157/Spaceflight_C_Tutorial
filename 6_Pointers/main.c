@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "../4_Header_Files/shapes.h"
 
 void main (void) {
 	/* A 'pointer' holds the location in memory where a variable is stored, rather
@@ -30,4 +31,28 @@ void main (void) {
 	
 	printf("First element: %i\n", *arr_ptr);
 	printf("Second element: %i\n", *arr_ptr_2);
+
+	/* Pointers are also used for structures in the same way. You will see this often in the
+	UOS3 repository for things like config structures */
+	Point myPoint = {3,4};		/* Create a point structure using the shape.h include */ 
+	Point* point_pointer;		/* This creates a pointer to a Point strucure */
+	point_pointer = &myPoint;	/* This sets the pointer to the location of our Point struct */
+
+	int x_temp;
+	/* How we would access the Point structure values directly */
+	x_temp = myPoint.x;
+	printf("x_temp direct access: %i\n", x_temp);
+
+	/* *(point_pointer) means the value at point_pointer's pointed to location, so it is the 
+		same as myPoint. Therefore, this is the same as the assignment above. This is
+		called dereferencing a pointer. */
+	x_temp = (*(point_pointer)).x;
+	printf("x_temp access via pointer: %i\n", x_temp);
+
+	/* We programmers are lazy, so instead of typing that mess, there is a special operator (->)
+		for returning structure elements DIRECTLY when passed a pointer. Another statement
+		that matches the prevous two is as follows: */
+	x_temp = point_pointer->x;
+	printf("x_temp with pointer -> operator: %i\n", x_temp);
+
 }

@@ -6,11 +6,10 @@ void main (void) {
 	int* first_element_pointer = &(test_array[0]);
 	int array_length = 4;
 
-	/* Task: write code that prints out the elements of the array above along with their
+	/* TASK: write code that prints out the elements of the array above along with their
 	locations in memory.
 
 	You must not use the text 'test_array', and can only use the pointer provided above
 	called 'first_element_pointer'. */
 
-	
 }
